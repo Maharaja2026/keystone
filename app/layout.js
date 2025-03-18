@@ -21,7 +21,7 @@ const gilroyMedium = localFont({
 });
 
 export const metadata = {
-  title: "CODEWORX",
+  title: "KeyStone",
   description: "Best IT staffing solutions",
 };
 
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" href="/logo.svg" />
+        <link rel="icon" href="/Symbol.svg" />
       </head>
       <body className="bg-white">
         <Header />

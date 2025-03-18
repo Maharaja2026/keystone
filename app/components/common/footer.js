@@ -12,44 +12,33 @@ const Footer = () => {
         <div className="max-w-[1200px] mx-auto px-6 lg:px-0 grid md:grid-cols-3 gap-10">
           {/* Left Section - Company Info */}
           <div>
-            <h2 className="text-2xl font-bold text-blue-400">CODEWORK</h2>
-            <p className="text-gray-400 mt-3 leading-relaxed">
-              We connect companies with top talent and help candidates find their next career opportunity.
-            </p>
-            {/* Social Icons */}
-            <div className="flex gap-4 mt-4">
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaLinkedin size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaFacebook size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaTwitter size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition">
-                <FaInstagram size={24} />
-              </a>
-            </div>
-          </div>
+  <img 
+    src="/Logo.svg" 
+    alt="Codework Logo" 
+    className="w-60 h-36" 
+  />
+  <p className="text-gray-400 mt-3 leading-relaxed">
+    We connect companies with top talent and help candidates find their next career opportunity.
+  </p>
+</div>
 
           {/* Middle Section - Quick Links */}
           <div>
             <h3 className="text-xl font-semibold">Quick Links</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition">
-                  About Us
+                <Link href={"/our-company"} className="text-gray-400 hover:text-white transition">
+                  Our Company
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-gray-400 hover:text-white transition">
-                  Services
+                <Link href={"/vison-mission"} className="text-gray-400 hover:text-white transition">
+                  Vision & Mission
                 </Link>
               </li>
               <li>
-                <Link href="/client" className="text-gray-400 hover:text-white transition">
-                  Clients
+                <Link href={"/our-services"} className="text-gray-400 hover:text-white transition">
+                  Our Services
                 </Link>
               </li>
             </ul>
@@ -60,24 +49,45 @@ const Footer = () => {
             <h3 className="text-xl font-semibold">Get In Touch</h3>
             <ul className="mt-4 space-y-3">
               <li className="flex items-center gap-3">
-                <div className="bg-gray-400 p-2 rounded-full shadow">
+                <div className="bg-blue-500 p-2 rounded-full shadow">
                   <HiOutlineLocationMarker size={22} className="text-white" />
                 </div>
-                <span className="text-white">
-                  Level 3, Akshaya HQ, OMR, Kazhipattur, Chennai, Tamilnadu, 603103.
+                <span className="text-gray-300 text-sm font-gilroy-regular">
+                  <a 
+                    href="https://maps.app.goo.gl/tQui8dUqJEv7ytBu9" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    Level 3, Akshaya HQ, OMR, Kazhipattur, Chennai, Tamilnadu, 603103.
+                  </a>
                 </span>
               </li>
               <li className="flex items-center gap-3">
-                <div className="bg-gray-400 p-2 rounded-full shadow">
+                <div className="bg-blue-500 p-2 rounded-full shadow">
                   <HiOutlinePhone size={22} className="text-white" />
                 </div>
-                <span className="text-white">+91 75989 81500</span>
+                <span className="text-gray-300 text-sm font-gilroy-regular">
+                  <a 
+                    href="tel:+917598981500" 
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    +91 75989 81500
+                  </a>
+                </span>
               </li>
               <li className="flex items-center gap-3">
-                <div className="bg-gray-400 p-2 rounded-full shadow">
+                <div className="bg-blue-500 p-2 rounded-full shadow">
                   <HiOutlineMail size={22} className="text-white" />
                 </div>
-                <span className="text-white">support@codework.ai</span>
+                <span className="text-gray-300 text-sm font-gilroy-regular">
+                  <a 
+                    href="mailto:support@codework.ai" 
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    support@codework.ai
+                  </a>
+                </span>
               </li>
             </ul>
           </div>
@@ -86,14 +96,13 @@ const Footer = () => {
   
       <div className="bg-[#202020] py-8 px-10 w-full text-gray-300 text-center">
         <p>
-          &copy; <span>{currentYear}</span> All rights reserved |{" "}
+          © <span>{currentYear}</span> All rights reserved |{" "}
           <a
-            href={"https://www.codework.ai/"}
             target="_blank"
             rel="noopener noreferrer"
             className="font-bold text-[#6581b9] hover:text-white duration-300"
           >
-            CODEWORK <span className="sr-only">Opens in a new tab</span>
+            KeyStone <span className="sr-only">Opens in a new tab</span>
           </a>
         </p>
       </div>
