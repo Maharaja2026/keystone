@@ -13,7 +13,7 @@ const Footer = () => {
           {/* Left Section - Company Info */}
           <div>
   <img 
-    src="/Logo.svg" 
+    src="\logowhite.png" 
     alt="Codework Logo" 
     className="w-60 h-36" 
   />
