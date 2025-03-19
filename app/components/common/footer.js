@@ -59,7 +59,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    Level 3, Akshaya HQ, OMR, Kazhipattur, Chennai, Tamilnadu, 603103.
+                    South street, Chennai - 632208.
                   </a>
                 </span>
               </li>
@@ -72,7 +72,7 @@ const Footer = () => {
                     href="tel:+917598981500" 
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    +91 75989 81500
+                    +91 95479 29370
                   </a>
                 </span>
               </li>
@@ -82,10 +82,10 @@ const Footer = () => {
                 </div>
                 <span className="text-gray-300 text-sm font-gilroy-regular">
                   <a 
-                    href="mailto:support@codework.ai" 
+                    href="mailto:keystone@gmail.com" 
                     className="text-gray-300 hover:text-white transition-colors"
                   >
-                    support@codework.ai
+                    keystone@gmail.com
                   </a>
                 </span>
               </li>

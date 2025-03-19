@@ -5,13 +5,13 @@ import { FaUsers, FaSearch, FaClipboardCheck, FaUserPlus } from "react-icons/fa"
 const HowWorks = () => {
   return (
     <div className="relative w-full min-h-screen overflow-hidden flex items-start pt-8 sm:pt-12 lg:pt-16">
-          <div className="mx-auto text-center relative py-6 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-10 w-full max-w-7xl">
+      <div className="mx-auto text-center relative py-6 sm:py-10 md:py-12 lg:py-16 px-4 sm:px-6 md:px-8 lg:px-10 w-full max-w-7xl">
         {/* Title Section */}
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-normal text-[#212121]">
-          How we work
+          How We Work
         </h2>
         <p className="text-[#4C596A] text-base sm:text-lg md:text-xl lg:text-2xl mt-2 sm:mt-3 md:mt-4 font-normal font-gilroy-regular">
-          Our streamlined approach to smart staffing
+          Our efficient process for HR, manpower, and visa solutions
         </p>
 
         {/* Steps Section */}
@@ -22,7 +22,7 @@ const HowWorks = () => {
               <FaUsers className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-blue-500" />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#4C596A] font-normal font-gilroy-medium mt-2 sm:mt-3 md:mt-4 text-center">
-              Define Human Resource Requirements
+              Assess HR & Manpower Needs
             </p>
           </div>
 
@@ -52,7 +52,7 @@ const HowWorks = () => {
               <FaSearch className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-blue-500" />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#4C596A] font-normal font-gilroy-medium mt-2 sm:mt-3 md:mt-4 text-center">
-              Identifying Talent Sources
+              Source Skilled Workforce
             </p>
           </div>
 
@@ -82,7 +82,7 @@ const HowWorks = () => {
               <FaClipboardCheck className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-blue-500" />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#4C596A] font-normal font-gilroy-medium mt-2 sm:mt-3 md:mt-4 text-center">
-              Industry-Standard Screening & Interviews
+              Visa Processing & Verification
             </p>
           </div>
 
@@ -112,7 +112,7 @@ const HowWorks = () => {
               <FaUserPlus className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-blue-500" />
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-lg text-[#4C596A] font-normal font-gilroy-medium mt-2 sm:mt-3 md:mt-4 text-center">
-              Flexible Onboarding & Integration
+              Seamless Deployment & Support
             </p>
           </div>
         </div>

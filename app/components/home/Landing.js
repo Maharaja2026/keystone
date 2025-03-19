@@ -25,13 +25,13 @@ const Landing = () => {
           ></div>
 
           <h1 className="text-[40px] sm:text-[45px] md:text-5xl lg:text-[53px] font-normal font-gilroy-semibold text-[#212121] leading-tight md:leading-[66px] relative z-10">
-            Where Great Companies <br className="hidden sm:block" />
-            Meet Exceptional IT <br className="hidden sm:block" />
-            Professionals.
+            Empowering Your Business <br className="hidden sm:block" />
+            with HR, Manpower, and <br className="hidden sm:block" />
+            Visa Solutions.
           </h1>
           <div className="text-gray-500 mt-4 text-base sm:text-lg w-full relative z-10 font-gilroy-regular">
-            <p>We make hiring seamless with customized staffing solutions</p>
-            <p>that match the right talent to your needs.</p>
+            <p>We streamline your growth with expert HR solutions,</p>
+            <p>reliable manpower supply, and seamless visa services.</p>
           </div>
 
         </div>
@@ -56,8 +56,7 @@ const Landing = () => {
           </motion.div>
         </div>
       </div>
-</div>
-      
+    </div>
   );
 };
 
