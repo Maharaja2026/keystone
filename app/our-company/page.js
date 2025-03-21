@@ -1,13 +1,16 @@
-import React from 'react'
-import CompanyLanding from '../components/company/companyLanding'
+import React from "react";
+import CompanyLanding from "../components/company/companyLanding";
+import OurMission from "../components/company/ourMission";
+import WhyChooseUs from "../components/company/whyChooseUs";
+import OurTeam from "../components/company/ourTeam";
 
-const page = () => {
+export default function Company() {
   return (
     <div>
-        <CompanyLanding/>
-      
+      <CompanyLanding />
+      <OurMission />
+      <WhyChooseUs />
+      <OurTeam />
     </div>
-  )
+  );
 }
-
-export default page
