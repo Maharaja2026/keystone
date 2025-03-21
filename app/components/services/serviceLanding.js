@@ -8,11 +8,11 @@ const ServiceLanding = () => {
         <div className="relative top-16 md:top-0">
           {/* Video Section */}
           <video
-            src="\service.mp4"
+            src="\services.mp4"
             autoPlay
             muted
             loop
-            className="w-full h-[100vh] max-w-full object-cover object-top"
+            className="w-full h-[80vh] max-w-full object-cover object-top"
             aria-label="Promotional video showcasing pricing details"
           >
             {/* Fallback content for unsupported browsers */}
