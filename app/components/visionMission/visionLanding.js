@@ -5,14 +5,23 @@ import { motion } from 'framer-motion';
 const VisionLanding = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 pt-16">
+      {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-5"></div>
+      
+      {/* Vision Mission SVG Background */}
+      <div 
+        className="absolute inset-0 bg-[url('/VisionMission.svg')] bg-no-repeat  bg-cover  mix-blend-multiply"
+        style={{ 
+          backgroundSize: '100%',
+        }}
+      ></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center max-w-4xl mx-auto"
+          className="text-center max-w-4xl mx-auto relative z-10"
         >
           <h1 className="text-5xl lg:text-6xl font-gilroy-semibold text-[#212121] leading-tight mb-8">
             Shaping the Future of
