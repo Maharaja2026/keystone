@@ -39,7 +39,7 @@ const Nav = ({ nav, setNav }) => {
             <NavLink href={"/our-company"} title={"Our Company"} />
           </li>
           <li>
-            <NavLink href={"/vison-mission"} title={"Vision & Mission"} />
+            <NavLink href={"/vision-mission"} title={"Vision & Mission"} />
           </li>
           <li>
             <NavLink href={"/our-services"} title={"Our Services"} />
