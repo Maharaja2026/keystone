@@ -1,112 +1,78 @@
 import React from 'react';
+import { FaUsers, FaGlobeAmericas, FaFileAlt } from 'react-icons/fa';
 
 const OurServices = () => {
+  const services = [
+    {
+      icon: <FaUsers className="w-8 h-8 text-blue-600" />,
+      title: "Manpower Supply",
+      description: "Expert staffing solutions across industries with verified professionals. We handle recruitment, screening, and placement to meet your workforce needs.",
+      features: [
+        "Temporary & Permanent Staffing",
+        "Technical & Professional Recruitment",
+        "Workforce Management",
+        "Skills Assessment & Verification"
+      ]
+    },
+    {
+      icon: <FaGlobeAmericas className="w-8 h-8 text-blue-600" />,
+      title: "HR Solutions",
+      description: "Comprehensive HR management services to streamline your operations and enhance workplace efficiency.",
+      features: [
+        "Payroll Management",
+        "HR Consulting",
+        "Employee Training & Development",
+        "Performance Management Systems"
+      ]
+    },
+    {
+      icon: <FaFileAlt className="w-8 h-8 text-blue-600" />,
+      title: "Visa Services",
+      description: "End-to-end visa processing and immigration support for businesses and professionals worldwide.",
+      features: [
+        "Work Permit Processing",
+        "Visa Application Support",
+        "Immigration Consulting",
+        "Document Verification"
+      ]
+    }
+  ];
+
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        {/* Section Heading */}
-        <div className="mb-10 text-center">
-          <h2 className="text-3xl font-bold text-gray-800">Caring is the new marketing</h2>
-          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-            The Naxcent blog is the best place to read about the latest membership insights, 
-            trends, and more. See who's joining the community, read about how our community 
-            are increasing their membership income and lots more!
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-gilroy-semibold text-[#212121]">
+            Our Comprehensive Services
+          </h2>
+          <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
+            Streamlining your business growth with expert HR solutions, reliable manpower supply, 
+            and seamless visa services.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 max-w-6xl mx-auto px-8">
-          {/* Card 1 */}
-          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            {/* Image */}
-            <img
-              className="w-full h-64 object-cover"
-              src="/services1.jpg"
-              alt="Safeguarding with OneRen"
-            />
-            {/* Text Content */}
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2 text-gray-800">
-                Creating Streamlined Safeguarding Processes with OneRen
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+                {service.icon}
+              </div>
+              <h3 className="text-2xl font-gilroy-semibold text-[#212121] mb-4">
+                {service.title}
               </h3>
-              <a
-                href="#"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
-              >
-                Readmore
-                <svg
-                  className="w-4 h-4 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
+              <p className="text-gray-600 mb-6">
+                {service.description}
+              </p>
+              <ul className="space-y-3">
+                {service.features.map((feature, idx) => (
+                  <li key={idx} className="flex items-center text-gray-600">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <img
-              className="w-full h-64 object-cover"
-              src="services2.jpg"
-              alt="Safeguarding responsibilities"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2 text-gray-800">
-                What are your safeguarding responsibilities and how can you manage them?
-              </h3>
-              <a
-                href="#"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
-              >
-                Readmore
-                <svg
-                  className="w-4 h-4 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-            <img
-              className="w-full h-64 object-cover"
-              src="services3.jpg"
-              alt="Membership Model with Triathlon Australia"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-semibold mb-2 text-gray-800">
-                Revamping the Membership Model with Triathlon Australia
-              </h3>
-              <a
-                href="#"
-                className="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors"
-              >
-                Readmore
-                <svg
-                  className="w-4 h-4 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
