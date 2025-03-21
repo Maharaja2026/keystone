@@ -115,7 +115,7 @@ const Nav = ({ nav, setNav }) => {
           <NavLink href={"/our-company"} title={"Our Company"} />
         </li>
         <li className="w-full text-center py-2">
-          <NavLink href={"/vison-mission"} title={"Vision & Mission"} />
+          <NavLink href={"/vision-mission"} title={"Vision & Mission"} />
         </li>
         <li className="w-full text-center py-2">
           <NavLink href={"/our-services"} title={"Our Services"} />
