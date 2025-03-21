@@ -63,7 +63,7 @@ const OurMission = () => {
           >
             <div className="relative h-full">
               <Image
-                src="/mission-1.jpg"
+                src="/ourmission1.jpg"
                 alt="Team Collaboration"
                 fill
                 className="object-cover rounded-xl"
@@ -72,7 +72,7 @@ const OurMission = () => {
             <div className="grid grid-rows-2 gap-4">
               <div className="relative">
                 <Image
-                  src="/mission-2.jpg"
+                  src="/ourmission2.jpg"
                   alt="Global Network"
                   fill
                   className="object-cover rounded-xl"
@@ -80,7 +80,7 @@ const OurMission = () => {
               </div>
               <div className="relative">
                 <Image
-                  src="/mission-3.jpg"
+                  src="/ourmission3.jpg"
                   alt="Professional Excellence"
                   fill
                   className="object-cover rounded-xl"

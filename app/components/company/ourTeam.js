@@ -7,25 +7,25 @@ const OurTeam = () => {
     {
       name: "John Smith",
       position: "CEO & Founder",
-      image: "/team/ceo.jpg",
+      image: "/ourteam1.jpg",
       linkedin: "#"
     },
     {
       name: "Sarah Johnson",
       position: "HR Director",
-      image: "/team/hr-director.jpg",
+      image: "/ourteam2.jpg",
       linkedin: "#"
     },
     {
       name: "Michael Chen",
       position: "Visa Services Head",
-      image: "/team/visa-head.jpg",
+      image: "/ourteam3.jpg",
       linkedin: "#"
     },
     {
       name: "Emma Williams",
       position: "Operations Manager",
-      image: "/team/operations.jpg",
+      image: "/ourteam4.jpg",
       linkedin: "#"
     }
   ];
@@ -46,28 +46,32 @@ const OurTeam = () => {
           {teamMembers.map((member, index) => (
             <div 
               key={index}
-              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
+              className="relative group bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow h-96"
             >
-              <div className="relative h-64 w-full">
+              <div className="absolute inset-0 w-full h-full">
                 <Image
                   src={member.image}
                   alt={member.name}
                   fill
                   className="object-cover"
                 />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-gilroy-semibold text-[#212121]">
+              
+              {/* Content overlay */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl font-gilroy-semibold">
                   {member.name}
                 </h3>
-                <p className="text-gray-600 mt-1">
+                <p className="text-gray-200 mt-1">
                   {member.position}
                 </p>
                 <a 
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-block text-blue-600 hover:text-blue-700"
+                  className="mt-4 hidden group-hover:inline-block text-white hover:text-blue-400 transition-colors"
                 >
                   <FaLinkedin className="w-6 h-6" />
                 </a>

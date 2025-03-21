@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
 import { 
   FaGlobe, 
   FaUserTie, 
@@ -9,6 +10,12 @@ import {
 } from 'react-icons/fa';
 
 const WhyChooseUs = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   const features = [
     {
       icon: <FaGlobe />,
@@ -58,7 +65,22 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="p-6 bg-white border border-gray-100 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+              className={`p-6 bg-white border border-gray-100 rounded-lg 
+                shadow-[0_4px_20px_rgba(0,106,255,0.12)] 
+                hover:shadow-[0_4px_25px_rgba(0,106,255,0.25)]
+                transition-all duration-1000 ease-in-out
+                flex flex-col items-center text-center
+                transform
+                ${isVisible 
+                  ? 'translate-x-0 opacity-100' 
+                  : index < 3 
+                    ? '-translate-x-full opacity-0' 
+                    : 'translate-x-full opacity-0'
+                }
+                ${index < 3 
+                  ? 'hover:-translate-x-3' 
+                  : 'hover:translate-x-3'
+                }`}
             >
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <span className="text-blue-600 text-2xl">

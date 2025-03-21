@@ -64,7 +64,7 @@ const CompanyLanding = () => {
           >
             <div className="relative h-[600px] w-full">
               <Image
-                src="/company-about.jpg"
+                src="/ourcompany.jpg"
                 alt="Keystone Team"
                 fill
                 className="object-cover rounded-2xl shadow-2xl"
