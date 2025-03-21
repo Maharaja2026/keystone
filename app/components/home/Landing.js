@@ -37,14 +37,27 @@ const Landing = () => {
         </div>
 
         {/* Right Image */}
-        <div className="lg:w-1/2 flex justify-center relative ">
+        <div className="lg:w-1/2 flex justify-center relative">
           {/* Main Background Image */}
-          <Image
-            src="/landing.jpg"
-            alt="Landing Image"
-            width={1000}
-            height={1000}
-          />
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ 
+              duration: 1.2,
+              ease: "easeOut",
+              opacity: { duration: 1.5 },
+              scale: { duration: 1.3 }
+            }}
+            className="w-full h-full"
+          >
+            <Image
+              src="/landing.jpg"
+              alt="Landing Image"
+              width={1000}
+              height={1000}
+              className="object-cover"
+            />
+          </motion.div>
 
           <motion.div
             initial={{ y: -100, opacity: 0 }}
@@ -52,7 +65,6 @@ const Landing = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="absolute bottom-0 left-[calc(50%-113px)] transform -translate-x-1/2 md:left-[calc(40%-123px)] lg:left-[calc(45%-123px)] xl:left-[calc(50%-123px)]"
           >
-           
           </motion.div>
         </div>
       </div>

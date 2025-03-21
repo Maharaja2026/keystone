@@ -69,21 +69,25 @@ const VisionGoals = () => {
             </div>
           </motion.div>
 
-          {/* Right Side - Image */}
+          {/* Right Side - Video */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative h-[600px]"
+            className="relative h-[600px] rounded-2xl overflow-hidden"
           >
-            <Image
-              src="/vision-goals.jpg"
-              alt="Strategic Vision"
-              fill
-              className="object-cover rounded-2xl shadow-xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-2xl" />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/OurStrategic.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
             <div className="absolute bottom-8 left-8 text-white">
               <h3 className="text-2xl font-gilroy-semibold mb-2">Vision 2025</h3>
               <p className="text-sm opacity-90">Transforming the future of work</p>
