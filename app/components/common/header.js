@@ -35,6 +35,7 @@ const Header = () => {
           />
         </div>
       </Link>
+      
       <Nav nav={nav} setNav={setNav} />
     </header>
   );
