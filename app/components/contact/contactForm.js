@@ -1,107 +1,74 @@
-"use client";
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Add your form submission logic here
-    console.log(formData);
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
   return (
-    <div className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.form
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          onSubmit={handleSubmit}
-          className="bg-white rounded-2xl shadow-xl p-8 md:p-12"
-        >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div>
-              <label className="block text-gray-700 mb-2">Name</label>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-2">Email</label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-2">Phone</label>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 mb-2">Subject</label>
-              <input
-                type="text"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required
-              />
-            </div>
-            <div className="md:col-span-2">
-              <label className="block text-gray-700 mb-2">Message</label>
-              <textarea
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="5"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                required
-              ></textarea>
-            </div>
-          </div>
-          <div className="mt-8 text-center">
-            <button
-              type="submit"
-              className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300"
-            >
-              Send Message
-            </button>
-          </div>
-        </motion.form>
-      </div>
-    </div>
+    <form className="flex flex-col gap-6 w-full font-normal text-[#313646]">
+      <label htmlFor="firstName" className="sr-only">
+        First name
+      </label>
+      <input
+        type="text"
+        placeholder="First Name"
+        id="firstName"
+        required
+        aria-required
+        className="bg-[#F7F7F7] placeholder:text-[#313646] py-4 px-5"
+      />
+      <label htmlFor="lastName" className="sr-only">
+        Last name
+      </label>
+      <input
+        type="text"
+        placeholder="Last Name"
+        id="lastName"
+        required
+        aria-required
+        className="bg-[#F7F7F7] placeholder:text-[#313646] py-4 px-5"
+      />
+      <label htmlFor="phone" className="sr-only">
+        Phone number
+      </label>
+      <input
+        type="tel"
+        placeholder="Phone"
+        id="phone"
+        required
+        aria-required
+        className="bg-[#F7F7F7] placeholder:text-[#313646] py-4 px-5"
+      />
+      <label htmlFor="email" className="sr-only">
+        Email
+      </label>
+      <input
+        type="email"
+        placeholder="Email"
+        id="email"
+        required
+        aria-required
+        className="bg-[#F7F7F7] placeholder:text-[#313646] py-4 px-5"
+      />
+      <label htmlFor="message" className="sr-only">
+        Message
+      </label>
+      <textarea
+        placeholder="Message"
+        rows={6}
+        id="message"
+        required
+        aria-required
+        className="bg-[#F7F7F7] placeholder:text-[#313646] py-4 px-5"
+      ></textarea>
+
+      {/* Send Message Button with Animation */}
+      <button className="relative inline-block overflow-hidden bg-white border-2 border-blue-500 text-blue-500 font-semibold text-sm py-3 px-5 w-full sm:w-[160px] uppercase cursor-pointer group">
+        <span className="relative z-10 transition-colors duration-600 ease-in-out group-hover:text-white">
+          Send Message
+        </span>
+        <span className="absolute inset-0 bg-blue-500 transition-all duration-500 ease-in-out transform translate-x-full translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 z-0 opacity-0 group-hover:opacity-100"></span>
+
+        <span className="absolute inset-0 bg-blue-500 transform origin-bottom scale-y-0 skew-y-9.3 transition-transform duration-600 ease-in-out z-50"></span>
+      </button>
+    </form>
   );
 };
 

@@ -10,7 +10,7 @@ const VisionLanding = () => {
       
       {/* Vision Mission SVG Background */}
       <div 
-        className="absolute inset-0 bg-[url('/VisionMission.svg')] bg-no-repeat  bg-cover  mix-blend-multiply"
+        className="absolute inset-0 bg-[url('/VisionMission.svg')] bg-no-repeat "
         style={{ 
           backgroundSize: '100%',
         }}
